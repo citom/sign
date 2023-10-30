@@ -52,7 +52,7 @@ export const ResetPasswordTemplate = ({
               <Section>
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="Documenso Logo"
+                  alt="Interflare Logo"
                   className="mb-4 h-6"
                 />
 
@@ -67,22 +67,25 @@ export const ResetPasswordTemplate = ({
             <Container className="mx-auto mt-12 max-w-xl">
               <Section>
                 <Text className="my-4 text-base font-semibold">
-                  Hi, {userName}{' '}
+                  Hallo, {userName}{' '}
                   <Link className="font-normal text-slate-400" href={`mailto:${userEmail}`}>
                     ({userEmail})
                   </Link>
                 </Text>
 
                 <Text className="mt-2 text-base text-slate-400">
-                  We've changed your password as you asked. You can now sign in with your new
-                  password.
+                  Auf Ihre Anfrage hin haben wir Ihr Passwort geändert. Sie können sich nun mit
+                  Ihrem neuen Passwort anmelden.
                 </Text>
                 <Text className="mt-2 text-base text-slate-400">
-                  Didn't request a password change? We are here to help you secure your account,
-                  just{' '}
-                  <Link className="text-documenso-700 font-normal" href="mailto:hi@documenso.com">
-                    contact us.
+                  Keine Passwortänderung angefordert? Bitte kontaktieren Sie uns unter{' '}
+                  <Link
+                    className="text-documenso-700 font-normal"
+                    href="mailto:support@interflare.de"
+                  >
+                    support@interflare.de
                   </Link>
+                  , damit wir uns umgehend darum kümmern können.
                 </Text>
               </Section>
             </Container>

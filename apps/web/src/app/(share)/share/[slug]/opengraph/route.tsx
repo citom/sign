@@ -62,7 +62,7 @@ export async function GET(_request: Request, { params: { slug } }: SharePageOpen
 
         <div tw="absolute top-20 flex w-full items-center justify-center">
           {/* @ts-expect-error Lack of typing from ImageResponse */}
-          <Logo tw="h-8 w-60" />
+          <Logo tw="h-10 w-60" />
         </div>
 
         {signatureImage ? (

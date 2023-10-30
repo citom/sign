@@ -9,17 +9,36 @@ export const TemplateFooter = ({ isDocument = true }: TemplateFooterProps) => {
     <Section>
       {isDocument && (
         <Text className="my-4 text-base text-slate-400">
-          This document was sent using{' '}
-          <Link className="text-[#7AC455]" href="https://documenso.com">
-            Documenso.
-          </Link>
+          Dieses Dokument wurde mit{' '}
+          <Link className="text-[#7AC455]" href="https://sign.interflare.de">
+            Interflare Sign
+          </Link>{' '}
+          gesendet.
         </Text>
       )}
 
       <Text className="my-8 text-sm text-slate-400">
-        Documenso, Inc.
+        Interflare Consulting GmbH / Mühlgasse 15 / 71723 Großbottwar / Deutschland
         <br />
-        2261 Market Street, #5211, San Francisco, CA 94114, USA
+        <br />
+        Geschäftsführer: Selim Cumart, Daniel Baric
+        <br />
+        Sitz der Gesellschaft: Großbottwar / Registergericht: AG Stuttgart, HRB 790477
+        <br />
+        USt.-IdNr. DE 363 204 863
+        <br />
+        <br />
+        Sie erhalten diese E-Mail, weil jemand Ihnen möglicherweise ein Dokument zur Signierung
+        gesendet hat. Wir verwenden Ihre personenbezogenen Daten ausschließlich zum Zweck der
+        Signierung.
+        <br />
+        <br />
+        Wie Ihre persönlichen Daten verwendet werden und wie Sie Ihre Rechte ausüben können, finden
+        Sie in unseren{' '}
+        <a href="https://interflare.de/datenschutzerklaerung/" target="_blank noopener noreferrer">
+          Datenschutzhinweisen
+        </a>
+        .
       </Text>
     </Section>
   );

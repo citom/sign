@@ -28,5 +28,7 @@ export const signWithLocalCert = async ({ pdf }: SignWithLocalCertOptions) => {
     });
   }
 
-  return signer.sign(pdfWithPlaceholder, p12Cert);
+  return signer.sign(pdfWithPlaceholder, p12Cert, {
+    passphrase: process.env.NEXT_PRIVATE_SIGNING_PASSPHRASE,
+  });
 };

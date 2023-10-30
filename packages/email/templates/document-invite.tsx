@@ -32,7 +32,7 @@ export const DocumentInviteEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
   customBody,
 }: DocumentInviteEmailTemplateProps) => {
-  const previewText = `${inviterName} has invited you to sign ${documentName}`;
+  const previewText = `${inviterName} hat Sie eingeladen ein Dokument zu signieren`;
 
   const getAssetUrl = (path: string) => {
     return new URL(path, assetBaseUrl).toString();
@@ -57,7 +57,7 @@ export const DocumentInviteEmailTemplate = ({
               <Section>
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="Documenso Logo"
+                  alt="Interflare Logo"
                   className="mb-4 h-6"
                 />
 
@@ -84,7 +84,7 @@ export const DocumentInviteEmailTemplate = ({
                   {customBody ? (
                     <pre className="font-sans text-base text-slate-400">{customBody}</pre>
                   ) : (
-                    `${inviterName} has invited you to sign the document "${documentName}".`
+                    `${inviterName} hat Sie eingeladen das Dokument "${documentName}" zu signieren.`
                   )}
                 </Text>
               </Section>

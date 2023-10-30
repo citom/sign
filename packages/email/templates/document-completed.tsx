@@ -20,11 +20,11 @@ import { TemplateFooter } from '../template-components/template-footer';
 export type DocumentCompletedEmailTemplateProps = Partial<TemplateDocumentCompletedProps>;
 
 export const DocumentCompletedEmailTemplate = ({
-  downloadLink = 'https://documenso.com',
+  downloadLink = 'https://sign.interflare.de',
   documentName = 'Open Source Pledge.pdf',
-  assetBaseUrl = 'http://localhost:3002',
+  assetBaseUrl = 'http://sign.interflare.de',
 }: DocumentCompletedEmailTemplateProps) => {
-  const previewText = `Completed Document`;
+  const previewText = `Dokument vollständig signiert`;
 
   const getAssetUrl = (path: string) => {
     return new URL(path, assetBaseUrl).toString();
@@ -49,7 +49,7 @@ export const DocumentCompletedEmailTemplate = ({
               <Section className="p-2">
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="Documenso Logo"
+                  alt="Interflare Logo"
                   className="mb-4 h-6"
                 />
 

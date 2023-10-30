@@ -25,11 +25,11 @@ export const TemplateResetPassword = ({ assetBaseUrl }: TemplateResetPasswordPro
 
       <Section className="flex-row items-center justify-center">
         <Text className="text-primary mx-auto mb-0 max-w-[80%] text-center text-lg font-semibold">
-          Password updated!
+          Passwort aktualisiert!
         </Text>
 
         <Text className="my-1 text-center text-base text-slate-400">
-          Your password has been updated.
+          Ihr Passwort wurde aktualisiert.
         </Text>
 
         <Section className="mb-6 mt-8 text-center">

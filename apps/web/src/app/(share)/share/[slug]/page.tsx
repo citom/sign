@@ -10,11 +10,12 @@ type SharePageProps = {
 
 export function generateMetadata({ params: { slug } }: SharePageProps) {
   return {
-    title: 'Documenso - Share',
-    description: 'I just signed a document with Documenso!',
+    metadataBase: new URL('https://sign.interflare.de'),
+    title: 'Interflare Sign',
+    description: 'Ich habe soeben ein Dokument mit Interflare unterzeichnet!',
     openGraph: {
-      title: 'Documenso - Join the open source signing revolution',
-      description: 'I just signed with Documenso!',
+      title: 'Interflare Sign',
+      description: 'Unterschrieben mit Interflare!',
       type: 'website',
       images: [`${APP_BASE_URL}/share/${slug}/opengraph`],
     },
@@ -22,7 +23,7 @@ export function generateMetadata({ params: { slug } }: SharePageProps) {
       site: '@documenso',
       card: 'summary_large_image',
       images: [`${APP_BASE_URL}/share/${slug}/opengraph`],
-      description: 'I just signed with Documenso!',
+      description: 'Unterschrieben mit Interflare!',
     },
   } satisfies Metadata;
 }

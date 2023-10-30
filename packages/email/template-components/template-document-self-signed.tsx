@@ -39,16 +39,16 @@ export const TemplateDocumentSelfSigned = ({
                 src={getAssetUrl('/static/completed.png')}
                 className="-mt-0.5 mr-2 inline h-7 w-7 align-middle"
               />
-              Completed
+              Abgeschlossen
             </Text>
           </Column>
         </Section>
 
         <Text className="text-primary mb-0 mt-6 text-center text-lg font-semibold">
-          You have signed “{documentName}”
+          Sie haben “{documentName}” signiert
         </Text>
 
-        <Text className="mx-auto mb-6 mt-1 max-w-[80%] text-center text-base text-slate-400">
+        {/* <Text className="mx-auto mb-6 mt-1 max-w-[80%] text-center text-base text-slate-400">
           Create a{' '}
           <Link
             href={signUpUrl}
@@ -58,9 +58,9 @@ export const TemplateDocumentSelfSigned = ({
             free account
           </Link>{' '}
           to access your signed documents at any time.
-        </Text>
+        </Text> */}
 
-        <Section className="mb-6 mt-8 text-center">
+        {/* <Section className="mb-6 mt-8 text-center">
           <Button
             href={signUpUrl}
             className="mr-4 rounded-lg border border-solid border-slate-200 px-4 py-2 text-center text-sm font-medium text-black no-underline"
@@ -82,7 +82,7 @@ export const TemplateDocumentSelfSigned = ({
             />
             View plans
           </Button>
-        </Section>
+        </Section> */}
       </Section>
     </Tailwind>
   );

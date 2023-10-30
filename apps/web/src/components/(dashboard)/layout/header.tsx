@@ -41,9 +41,10 @@ export const Header = ({ className, user, ...props }: HeaderProps) => {
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between gap-x-4 px-4 md:justify-normal md:px-8">
         <Link
           href="/"
-          className="focus-visible:ring-ring ring-offset-background rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+          className="focus-visible:ring-ring ring-offset-background flex items-center gap-3 rounded-md text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
         >
-          <Logo className="h-6 w-auto" />
+          <Logo className="h-10 w-auto" />
+          Documenso
         </Link>
 
         <DesktopNav />
