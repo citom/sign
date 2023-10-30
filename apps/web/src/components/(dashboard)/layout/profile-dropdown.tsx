@@ -64,7 +64,7 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-56" align="end" forceMount>
-        <DropdownMenuLabel>Account</DropdownMenuLabel>
+        <DropdownMenuLabel>Konto</DropdownMenuLabel>
 
         {isUserAdmin && (
           <>
@@ -82,14 +82,14 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
         <DropdownMenuItem asChild>
           <Link href="/settings/profile" className="cursor-pointer">
             <LucideUser className="mr-2 h-4 w-4" />
-            Profile
+            Profil
           </Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
           <Link href="/settings/password" className="cursor-pointer">
             <Key className="mr-2 h-4 w-4" />
-            Password
+            Passwort
           </Link>
         </DropdownMenuItem>
 
@@ -97,7 +97,7 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
           <DropdownMenuItem asChild>
             <Link href="/settings/billing" className="cursor-pointer">
               <CreditCard className="mr-2 h-4 w-4" />
-              Billing
+              Rechnung
             </Link>
           </DropdownMenuItem>
         )}
@@ -113,11 +113,11 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
             <DropdownMenuSubContent>
               <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
                 <DropdownMenuRadioItem value="light">
-                  <Sun className="mr-2 h-4 w-4" /> Light
+                  <Sun className="mr-2 h-4 w-4" /> Hell
                 </DropdownMenuRadioItem>
                 <DropdownMenuRadioItem value="dark">
                   <Moon className="mr-2 h-4 w-4" />
-                  Dark
+                  Dunkel
                 </DropdownMenuRadioItem>
                 <DropdownMenuRadioItem value="system">
                   <Monitor className="mr-2 h-4 w-4" />
@@ -127,13 +127,13 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
-        <DropdownMenuSeparator />
+        {/* <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link href="https://github.com/documenso/documenso" className="cursor-pointer">
             <LuGithub className="mr-2 h-4 w-4" />
             Star on Github
           </Link>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
 
         <DropdownMenuSeparator />
 
@@ -145,7 +145,7 @@ export const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
           }
         >
           <LogOut className="mr-2 h-4 w-4" />
-          Sign Out
+          Abmelden
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

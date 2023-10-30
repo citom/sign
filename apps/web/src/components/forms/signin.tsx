@@ -7,6 +7,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import { signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
+import { TfiMicrosoftAlt } from 'react-icons/tfi';
 import { z } from 'zod';
 
 import { ErrorCode, isErrorCode } from '@documenso/lib/next-auth/error-codes';
@@ -98,6 +99,19 @@ export const SignInForm = ({ className }: SignInFormProps) => {
     }
   };
 
+  const onSignInWithMicrosoftClick = async () => {
+    try {
+      await signIn('azure-ad', { callbackUrl: LOGIN_REDIRECT_PATH });
+    } catch (err) {
+      toast({
+        title: 'An unknown error occurred',
+        description:
+          'We encountered an unknown error while attempting to sign you In. Please try again later.',
+        variant: 'destructive',
+      });
+    }
+  };
+
   return (
     <form
       className={cn('flex w-full flex-col gap-y-4', className)}
@@ -168,10 +182,10 @@ export const SignInForm = ({ className }: SignInFormProps) => {
         variant={'outline'}
         className="bg-background text-muted-foreground border"
         disabled={isSubmitting}
-        onClick={onSignInWithGoogleClick}
+        onClick={onSignInWithMicrosoftClick}
       >
-        <FcGoogle className="mr-2 h-5 w-5" />
-        Google
+        <TfiMicrosoftAlt className="mr-2 h-5 w-5" />
+        Microsoft
       </Button>
     </form>
   );

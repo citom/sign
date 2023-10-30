@@ -4,6 +4,7 @@ import { DateTime } from 'luxon';
 import { AuthOptions, Session, User } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider, { GoogleProfile } from 'next-auth/providers/google';
+import AzureADProvider, { AzureADProfile } from "next-auth/providers/azure-ad";
 
 import { prisma } from '@documenso/prisma';
 
@@ -54,6 +55,20 @@ export const NEXT_AUTH_OPTIONS: AuthOptions = {
     GoogleProvider<GoogleProfile>({
       clientId: process.env.NEXT_PRIVATE_GOOGLE_CLIENT_ID ?? '',
       clientSecret: process.env.NEXT_PRIVATE_GOOGLE_CLIENT_SECRET ?? '',
+      allowDangerousEmailAccountLinking: true,
+
+      profile(profile) {
+        return {
+          id: Number(profile.sub),
+          name: profile.name || `${profile.given_name} ${profile.family_name}`.trim(),
+          email: profile.email,
+        };
+      },
+    }),
+    AzureADProvider<AzureADProfile>({
+      clientId: process.env.NEXT_PRIVATE_AZURE_CLIENT_ID ?? '',
+      clientSecret: process.env.NEXT_PRIVATE_AZURE_CLIENT_SECRET ?? '',
+      tenantId: process.env.NEXT_PRIVATE_AZURE_TENANT_ID,
       allowDangerousEmailAccountLinking: true,
 
       profile(profile) {
