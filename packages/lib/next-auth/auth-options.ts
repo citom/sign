@@ -73,7 +73,7 @@ export const NEXT_AUTH_OPTIONS: AuthOptions = {
 
       profile(profile) {
         return {
-          id: String(profile.sub),
+          id: Number(profile.sub),
           name: profile.name || `${profile.given_name} ${profile.family_name}`.trim(),
           email: profile.email,
         };
