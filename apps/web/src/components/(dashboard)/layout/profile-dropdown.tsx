@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
-import { LuGithub } from 'react-icons/lu';
+// import { LuGithub } from 'react-icons/lu';
 
 import { useFeatureFlags } from '@documenso/lib/client-only/providers/feature-flag';
 import { isAdmin } from '@documenso/lib/next-auth/guards/is-admin';

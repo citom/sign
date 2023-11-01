@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Eye, EyeOff } from 'lucide-react';
 import { signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
-import { FcGoogle } from 'react-icons/fc';
+// import { FcGoogle } from 'react-icons/fc';
 import { TfiMicrosoftAlt } from 'react-icons/tfi';
 import { z } from 'zod';
 
@@ -86,18 +86,18 @@ export const SignInForm = ({ className }: SignInFormProps) => {
     }
   };
 
-  const onSignInWithGoogleClick = async () => {
-    try {
-      await signIn('google', { callbackUrl: LOGIN_REDIRECT_PATH });
-    } catch (err) {
-      toast({
-        title: 'An unknown error occurred',
-        description:
-          'We encountered an unknown error while attempting to sign you In. Please try again later.',
-        variant: 'destructive',
-      });
-    }
-  };
+  // const onSignInWithGoogleClick = async () => {
+  //   try {
+  //     await signIn('google', { callbackUrl: LOGIN_REDIRECT_PATH });
+  //   } catch (err) {
+  //     toast({
+  //       title: 'An unknown error occurred',
+  //       description:
+  //         'We encountered an unknown error while attempting to sign you In. Please try again later.',
+  //       variant: 'destructive',
+  //     });
+  //   }
+  // };
 
   const onSignInWithMicrosoftClick = async () => {
     try {
