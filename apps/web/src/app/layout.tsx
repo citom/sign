@@ -22,16 +22,13 @@ const fontCaveat = Caveat({ subsets: ['latin'], variable: '--font-signature' });
 
 export const metadata = {
   title: 'Interflare Sign / Documenso',
-  description:
-    '',
-  keywords:
-    '',
+  description: '',
+  keywords: '',
   authors: { name: 'Documenso, Inc.' },
   robots: 'noindex, nofollow',
   openGraph: {
     title: 'Interflare Sign / Documenso',
-    description:
-      '',
+    description: '',
     type: 'website',
     images: [`${process.env.NEXT_PUBLIC_WEBAPP_URL}/opengraph-image.jpg`],
   },
@@ -39,8 +36,7 @@ export const metadata = {
     site: '@documenso',
     card: 'summary_large_image',
     images: [`${process.env.NEXT_PUBLIC_WEBAPP_URL}/opengraph-image.jpg`],
-    description:
-      '.',
+    description: '.',
   },
 };
 

@@ -2,9 +2,9 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { compare } from 'bcrypt';
 import { DateTime } from 'luxon';
 import { AuthOptions, Session, User } from 'next-auth';
+import AzureADProvider, { AzureADProfile } from 'next-auth/providers/azure-ad';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider, { GoogleProfile } from 'next-auth/providers/google';
-import AzureADProvider, { AzureADProfile } from "next-auth/providers/azure-ad";
 
 import { prisma } from '@documenso/prisma';
 
