@@ -71,9 +71,10 @@ export const NEXT_AUTH_OPTIONS: AuthOptions = {
       tenantId: process.env.NEXT_PRIVATE_AZURE_TENANT_ID,
       allowDangerousEmailAccountLinking: true,
 
+      // @ts-ignore
       profile(profile) {
         return {
-          id: Number(profile.sub),
+          id: String(profile.sub),
           name: profile.name || `${profile.given_name} ${profile.family_name}`.trim(),
           email: profile.email,
         };
